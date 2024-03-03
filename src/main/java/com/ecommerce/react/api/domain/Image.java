@@ -7,7 +7,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.util.Arrays;
 
 @Data
 @NoArgsConstructor
@@ -27,6 +26,8 @@ public class Image implements Serializable {
    private String imageSize;
 
    private String sizeType;
+
+   private Long length;
 
    private byte[] imagedt;
 

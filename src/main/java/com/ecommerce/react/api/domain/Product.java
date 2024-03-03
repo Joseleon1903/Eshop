@@ -22,6 +22,12 @@ public class Product implements Serializable {
     @OneToOne(cascade = CascadeType.ALL)
     private Image imageId;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    private ProductDetail productDetail;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    private Category category;
+
     private String status;
 
     public Product(Long id, String name, String description, Image imageId, String status) {
@@ -39,6 +45,8 @@ public class Product implements Serializable {
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", imageId=" + imageId +
+                ", productDetail=" + productDetail +
+                ", category=" + category +
                 ", status='" + status + '\'' +
                 '}';
     }

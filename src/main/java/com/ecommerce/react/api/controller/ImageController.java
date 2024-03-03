@@ -50,6 +50,7 @@ public class ImageController {
             img.setImagedt(file.getBytes());
             img.setImageSize(ConstantUtil.humanReadableByteCountSI(file.getSize()));
             img.setSizeType(ConstantUtil.IMAGE_SIZE_TYPE);
+            img.setLength(file.getSize());
             logger.info("Store image product...");
             Image result = imageStoreService.storeImage(img);
             logger.info("returning "+ result);
